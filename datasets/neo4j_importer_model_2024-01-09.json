@@ -1,0 +1,441 @@
+{
+  "version": "1.2.0-beta.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "caption": "Order"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": 0,
+          "y": 300
+        },
+        "caption": "Product"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "CONTAINS",
+        "fromId": "n0",
+        "toId": "n1"
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "1.2.0-beta.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:n0",
+            "token": "Order"
+          },
+          {
+            "$id": "nl:n1",
+            "token": "Product"
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:n0",
+            "labels": [
+              {
+                "$ref": "#nl:n0"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:1",
+                "token": "id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": false
+              },
+              {
+                "$id": "p:2",
+                "token": "orderDate",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": false
+              },
+              {
+                "$id": "p:3",
+                "token": "requiredDate",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": false
+              }
+            ]
+          },
+          {
+            "$id": "n:n1",
+            "labels": [
+              {
+                "$ref": "#nl:n1"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:4",
+                "token": "id",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": false
+              },
+              {
+                "$id": "p:5",
+                "token": "productName",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": false
+              }
+            ]
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:n0",
+            "token": "CONTAINS"
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:n0",
+            "type": {
+              "$ref": "#rt:n0"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n1"
+            },
+            "properties": [
+              {
+                "$id": "p:6",
+                "token": "unitPrice",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:7",
+                "token": "quantity",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:8",
+                "token": "discount",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": [
+        {
+          "node": {
+            "$ref": "#n:n0"
+          },
+          "keyProperty": {
+            "$ref": "#p:1"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n1"
+          },
+          "keyProperty": {
+            "$ref": "#p:4"
+          }
+        }
+      ]
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "local/csv",
+        "tableSchemas": [
+          {
+            "$id": "t:1",
+            "name": "products.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "productID",
+                "type": "integer",
+                "sample": "1"
+              },
+              {
+                "name": "productName",
+                "type": "string",
+                "sample": "Chai"
+              },
+              {
+                "name": "supplierID",
+                "type": "integer",
+                "sample": "1"
+              },
+              {
+                "name": "categoryID",
+                "type": "integer",
+                "sample": "1"
+              },
+              {
+                "name": "quantityPerUnit",
+                "type": "string",
+                "sample": "10 boxes x 20 bags"
+              },
+              {
+                "name": "unitPrice",
+                "type": "float",
+                "sample": "18.00"
+              },
+              {
+                "name": "unitsInStock",
+                "type": "integer",
+                "sample": "39"
+              },
+              {
+                "name": "unitsOnOrder",
+                "type": "integer",
+                "sample": "0"
+              },
+              {
+                "name": "reorderLevel",
+                "type": "integer",
+                "sample": "10"
+              },
+              {
+                "name": "discontinued",
+                "type": "boolean",
+                "sample": "0"
+              }
+            ]
+          },
+          {
+            "$id": "t:2",
+            "name": "orders.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "orderID",
+                "type": "integer",
+                "sample": "10248"
+              },
+              {
+                "name": "customerID",
+                "type": "string",
+                "sample": "VINET"
+              },
+              {
+                "name": "employeeID",
+                "type": "integer",
+                "sample": "5"
+              },
+              {
+                "name": "orderDate",
+                "type": "string",
+                "sample": "1996-07-04 00:00:00.000"
+              },
+              {
+                "name": "requiredDate",
+                "type": "string",
+                "sample": "1996-08-01 00:00:00.000"
+              },
+              {
+                "name": "shippedDate",
+                "type": "string",
+                "sample": "1996-07-16 00:00:00.000"
+              },
+              {
+                "name": "shipVia",
+                "type": "integer",
+                "sample": "3"
+              },
+              {
+                "name": "freight",
+                "type": "float",
+                "sample": "32.38"
+              },
+              {
+                "name": "shipName",
+                "type": "string",
+                "sample": "Vins et alcools Chevalier"
+              },
+              {
+                "name": "shipAddress",
+                "type": "string",
+                "sample": "59 rue de l'Abbaye"
+              },
+              {
+                "name": "shipCity",
+                "type": "string",
+                "sample": "Reims"
+              },
+              {
+                "name": "shipRegion",
+                "type": "string",
+                "sample": "NULL"
+              },
+              {
+                "name": "shipPostalCode",
+                "type": "string",
+                "sample": "51100"
+              },
+              {
+                "name": "shipCountry",
+                "type": "string",
+                "sample": "France"
+              }
+            ]
+          },
+          {
+            "$id": "t:3",
+            "name": "order-details.csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "orderID",
+                "type": "integer",
+                "sample": "10248"
+              },
+              {
+                "name": "productID",
+                "type": "integer",
+                "sample": "11"
+              },
+              {
+                "name": "unitPrice",
+                "type": "float",
+                "sample": "14.00"
+              },
+              {
+                "name": "quantity",
+                "type": "integer",
+                "sample": "12"
+              },
+              {
+                "name": "discount",
+                "type": "float",
+                "sample": "0"
+              }
+            ]
+          }
+        ]
+      },
+      "nodeMappings": [
+        {
+          "node": {
+            "$ref": "#n:n0"
+          },
+          "tableSchema": {
+            "$ref": "#t:2"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:1"
+              },
+              "fieldName": "orderID"
+            },
+            {
+              "property": {
+                "$ref": "#p:2"
+              },
+              "fieldName": "orderDate"
+            },
+            {
+              "property": {
+                "$ref": "#p:3"
+              },
+              "fieldName": "requiredDate"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n1"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:4"
+              },
+              "fieldName": "productID"
+            },
+            {
+              "property": {
+                "$ref": "#p:5"
+              },
+              "fieldName": "productName"
+            }
+          ]
+        }
+      ],
+      "relationshipMappings": [
+        {
+          "relationship": {
+            "$ref": "#r:n0"
+          },
+          "tableSchema": {
+            "$ref": "#t:3"
+          },
+          "fromMapping": {
+            "fieldName": "orderID"
+          },
+          "toMapping": {
+            "fieldName": "productID"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:6"
+              },
+              "fieldName": "unitPrice"
+            },
+            {
+              "property": {
+                "$ref": "#p:7"
+              },
+              "fieldName": "quantity"
+            },
+            {
+              "property": {
+                "$ref": "#p:8"
+              },
+              "fieldName": "discount"
+            }
+          ]
+        }
+      ]
+    },
+    "configurations": {
+      "idsToIgnore": []
+    }
+  }
+}
