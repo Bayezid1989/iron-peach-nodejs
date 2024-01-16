@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export const writeFile = (path: string, data: string) => {
+export const writeStringFile = (path: string, data: string) => {
   fs.writeFile(path, data, (err) => {
     if (err) {
       console.error(err);

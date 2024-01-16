@@ -3,3 +3,5 @@ CREATE (a:City {placeId: "athens", location: point( {latitude:37.98381, longitud
 CREATE (a:City {placeId: "paris", location: point( {latitude:48.864716, longitude:2.349014})});
 
 MATCH (u:City), (v:City) WHERE u.id = "athens" AND v.id = "paris" CREATE (u)-[:`ADJACENT_TO`]->(v);
+
+MATCH (n) DETACH DELETE n;
