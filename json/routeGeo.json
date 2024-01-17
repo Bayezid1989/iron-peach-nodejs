@@ -11,7 +11,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -24,7 +24,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -37,7 +37,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -50,7 +50,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -63,7 +63,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -76,7 +76,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -89,7 +89,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -102,7 +102,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -115,7 +115,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -128,7 +128,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -141,7 +141,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -154,7 +154,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -167,7 +167,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -180,7 +180,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -193,7 +193,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -206,7 +206,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -219,7 +219,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     },
     {
@@ -232,7 +232,7 @@
         ]
       },
       "properties": {
-        "type": "land"
+        "kind": "land"
       }
     }
   ]

@@ -1,4 +1,8 @@
-import { generatePlaceFeaturesGeoJson } from "./fileGeneraters";
+import {
+  generatePlaceFeaturesGeoJson,
+  generateRouteFeaturesGeoJson,
+  generateRouteMergeCypher,
+} from "./fileGeneraters";
 import { driver, readNeo4j } from "./neo4j";
 
 (async () => {
@@ -9,5 +13,6 @@ import { driver, readNeo4j } from "./neo4j";
   //   "graph",
   //   graph.map((g) => g.n.properties),
   // );
-  generatePlaceFeaturesGeoJson();
+  generateRouteFeaturesGeoJson();
+  generateRouteMergeCypher();
 })();

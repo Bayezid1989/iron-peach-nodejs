@@ -40,5 +40,5 @@ export type PlaceFeature = {
 
 export type RouteConfig = {
   places: [PlaceId, PlaceId];
-  type: "air" | "land" | "sea";
+  kind: "air" | "land" | "sea";
 };

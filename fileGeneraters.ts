@@ -74,7 +74,7 @@ export const generateRouteFeaturesGeoJson = () => {
         ],
       },
       properties: {
-        type: route.type,
+        kind: route.kind,
       },
     };
   });
@@ -114,7 +114,7 @@ export const generateRouteMergeCypher = () => {
   ROUTES.forEach((route) => {
     const routeCypher = `
     MATCH (p1:Place { placeId: "${route.places[0]}" }), (p2:Place { placeId: "${route.places[1]}" })
-    MERGE (p1)-[:ADJACENT_TO { type: "${route.type}" }]->(p2);
+    MERGE (p1)-[:ADJACENT_TO { kind: "${route.kind}" }]->(p2);
   `;
     cypherString += routeCypher;
   });

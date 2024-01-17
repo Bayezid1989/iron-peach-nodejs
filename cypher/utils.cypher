@@ -17,6 +17,9 @@ CREATE CONSTRAINT FOR (a:Place) REQUIRE a.placeId IS UNIQUE;
 // Delete relationship
 MATCH (a:Place {placeId: "lisbon"})-[r:ADJACENT_TO]->(b:Place {placeId: "sevilla"}) DELETE r
 
+// Delete all relationships
+MATCH ()-[r:ADJACENT_TO]->() DELETE r
+
 // Delete all data
 MATCH (n) DETACH DELETE n;
 
