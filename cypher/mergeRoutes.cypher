@@ -11,7 +11,10 @@
     MATCH (p1:Place { placeId: "zaragoza" }), (p2:Place { placeId: "barcelona" })
     MERGE (p1)-[:ADJACENT_TO { kind: "land" }]->(p2);
   
-    MATCH (p1:Place { placeId: "barcelona" }), (p2:Place { placeId: "montpellier" })
+    MATCH (p1:Place { placeId: "barcelona" }), (p2:Place { placeId: "toulouse" })
+    MERGE (p1)-[:ADJACENT_TO { kind: "land" }]->(p2);
+  
+    MATCH (p1:Place { placeId: "toulouse" }), (p2:Place { placeId: "montpellier" })
     MERGE (p1)-[:ADJACENT_TO { kind: "land" }]->(p2);
   
     MATCH (p1:Place { placeId: "lyon" }), (p2:Place { placeId: "montpellier" })

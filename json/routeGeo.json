@@ -59,6 +59,19 @@
         "type": "LineString",
         "coordinates": [
           [2.154007, 41.390205],
+          [1.444209, 43.604652]
+        ]
+      },
+      "properties": {
+        "kind": "land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [1.444209, 43.604652],
           [3.876716, 43.610769]
         ]
       },

@@ -15,7 +15,7 @@ CREATE CONSTRAINT FOR (a:Place) REQUIRE a.placeId IS UNIQUE;
 
 // IRREGULAR QUERIES
 // Delete relationship
-MATCH (a:Place {placeId: "lisbon"})-[r:ADJACENT_TO]->(b:Place {placeId: "sevilla"}) DELETE r
+MATCH (a:Place {placeId: "barcelona"})-[r:ADJACENT_TO]->(b:Place {placeId: "montpellier"}) DELETE r;
 
 // Delete all relationships
 MATCH ()-[r:ADJACENT_TO]->() DELETE r

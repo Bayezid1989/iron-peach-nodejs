@@ -14,8 +14,8 @@ import { driver, readNeo4j } from "./neo4j";
     "graph",
     graph.map((g) => g.n.properties),
   );
-  // generateRouteFeaturesGeoJson();
-  // generateRouteMergeCypher();
-  generatePlaceMergeCypher();
-  generatePlaceFeaturesGeoJson();
+  generateRouteFeaturesGeoJson();
+  generateRouteMergeCypher();
+  // generatePlaceMergeCypher();
+  // generatePlaceFeaturesGeoJson();
 })();
