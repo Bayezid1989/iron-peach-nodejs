@@ -1,7 +1,25 @@
-CREATE POINT INDEX cityIndex FOR (a:City) ON (a.location);
-CREATE (a:City {placeId: "athens", location: point( {latitude:37.98381, longitude:23.727539})});
-CREATE (a:City {placeId: "paris", location: point( {latitude:48.864716, longitude:2.349014})});
+// REGULAR QUERIES
+// Count all nodes
+MATCH (a) RETURN COUNT(a)
 
+
+// INITIALIZATION
+// Create point index
+CREATE POINT INDEX placeIndex FOR (a:Place) ON (a.coordinates);
+
+// Create unique constraint
+CREATE CONSTRAINT FOR (a:Place) REQUIRE a.placeId IS UNIQUE;
+
+
+
+
+// IRREGULAR QUERIES
+// Delete relationship
+MATCH (a:Place {placeId: "lisbon"})-[r:ADJACENT_TO]->(b:Place {placeId: "sevilla"}) DELETE r
+
+// Delete all data
+MATCH (n) DETACH DELETE n;
+
+// Create relationship
 MATCH (u:City), (v:City) WHERE u.id = "athens" AND v.id = "paris" CREATE (u)-[:`ADJACENT_TO`]->(v);
 
-MATCH (n) DETACH DELETE n;

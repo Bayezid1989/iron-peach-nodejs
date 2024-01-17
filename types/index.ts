@@ -1,3 +1,5 @@
+import { PlaceId } from "./placeIdEnum";
+
 export type Asset = {
   // For property places
   name: string;
@@ -34,4 +36,9 @@ export type PlaceFeature = {
     items?: string[];
     cashVolume?: CashVolume;
   };
+};
+
+export type RouteConfig = {
+  places: [PlaceId, PlaceId];
+  type: "air" | "land" | "sea";
 };
