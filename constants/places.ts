@@ -33,7 +33,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   },
   rome: {
     name: "Rome",
-    coordinates: { lat: 40.416775, lng: -3.70379 },
+    coordinates: { lat: 41.902782, lng: 12.496366 },
     role: "property",
     category: "city",
     assets: [

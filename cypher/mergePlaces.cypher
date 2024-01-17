@@ -45,7 +45,7 @@
       SET p.coordinates = point({ longitude: 2.349014, latitude: 48.864716 });
     
       MERGE (p:Place { name: "Rome", placeId: "rome", role: "property", category: "city" })
-      SET p.coordinates = point({ longitude: -3.70379, latitude: 40.416775 });
+      SET p.coordinates = point({ longitude: 12.496366, latitude: 41.902782 });
     
       MERGE (p:Place { name: "Berlin", placeId: "berlin", role: "property", category: "city" })
       SET p.coordinates = point({ longitude: 13.404954, latitude: 52.520008 });

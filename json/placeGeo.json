@@ -5,7 +5,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-0.889085, 41.648823]
+        "coordinates": [
+          -0.889085,
+          41.648823
+        ]
       },
       "properties": {
         "name": "Zaragoza",
@@ -19,7 +22,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [3.876716, 43.610769]
+        "coordinates": [
+          3.876716,
+          43.610769
+        ]
       },
       "properties": {
         "name": "Montpellier",
@@ -33,7 +39,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-3.696906, 42.343479]
+        "coordinates": [
+          -3.696906,
+          42.343479
+        ]
       },
       "properties": {
         "name": "Burgos",
@@ -47,7 +56,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [1.444209, 43.604652]
+        "coordinates": [
+          1.444209,
+          43.604652
+        ]
       },
       "properties": {
         "name": "Toulouse",
@@ -61,7 +73,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-1.981231, 43.318334]
+        "coordinates": [
+          -1.981231,
+          43.318334
+        ]
       },
       "properties": {
         "name": "San Sebastian",
@@ -75,7 +90,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-0.370089, 43.296482]
+        "coordinates": [
+          -0.370089,
+          43.296482
+        ]
       },
       "properties": {
         "name": "Pau",
@@ -89,7 +107,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-0.57918, 44.837789]
+        "coordinates": [
+          -0.57918,
+          44.837789
+        ]
       },
       "properties": {
         "name": "Bordeaux",
@@ -103,7 +124,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-1.553621, 47.218371]
+        "coordinates": [
+          -1.553621,
+          47.218371
+        ]
       },
       "properties": {
         "name": "Nantes",
@@ -117,7 +141,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [4.835659, 45.764043]
+        "coordinates": [
+          4.835659,
+          45.764043
+        ]
       },
       "properties": {
         "name": "Lyon",
@@ -131,7 +158,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-8.629105, 41.157944]
+        "coordinates": [
+          -8.629105,
+          41.157944
+        ]
       },
       "properties": {
         "name": "Porto",
@@ -145,7 +175,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-5.984459, 37.389092]
+        "coordinates": [
+          -5.984459,
+          37.389092
+        ]
       },
       "properties": {
         "name": "Sevilla",
@@ -159,7 +192,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-5.353585, 36.140751]
+        "coordinates": [
+          -5.353585,
+          36.140751
+        ]
       },
       "properties": {
         "name": "Gibraltar",
@@ -173,7 +209,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-3.598557, 37.177336]
+        "coordinates": [
+          -3.598557,
+          37.177336
+        ]
       },
       "properties": {
         "name": "Granada",
@@ -187,7 +226,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [4.89707, 52.377956]
+        "coordinates": [
+          4.89707,
+          52.377956
+        ]
       },
       "properties": {
         "name": "Amsterdam",
@@ -227,7 +269,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [2.349014, 48.864716]
+        "coordinates": [
+          2.349014,
+          48.864716
+        ]
       },
       "properties": {
         "name": "Paris",
@@ -267,7 +312,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-3.70379, 40.416775]
+        "coordinates": [
+          12.496366,
+          41.902782
+        ]
       },
       "properties": {
         "name": "Rome",
@@ -307,7 +355,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.404954, 52.520008]
+        "coordinates": [
+          13.404954,
+          52.520008
+        ]
       },
       "properties": {
         "name": "Berlin",
@@ -347,7 +398,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-0.118092, 51.509865]
+        "coordinates": [
+          -0.118092,
+          51.509865
+        ]
       },
       "properties": {
         "name": "London",
@@ -387,7 +441,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [2.154007, 41.390205]
+        "coordinates": [
+          2.154007,
+          41.390205
+        ]
       },
       "properties": {
         "name": "Barcelona",
@@ -427,7 +484,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.568337, 55.676098]
+        "coordinates": [
+          12.568337,
+          55.676098
+        ]
       },
       "properties": {
         "name": "Copenhagen",
@@ -467,7 +527,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-9.142685, 38.736946]
+        "coordinates": [
+          -9.142685,
+          38.736946
+        ]
       },
       "properties": {
         "name": "Lisbon",
@@ -507,7 +570,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-6.266155, 53.35014]
+        "coordinates": [
+          -6.266155,
+          53.35014
+        ]
       },
       "properties": {
         "name": "Dublin",
@@ -547,7 +613,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-3.188267, 55.953251]
+        "coordinates": [
+          -3.188267,
+          55.953251
+        ]
       },
       "properties": {
         "name": "Edinburgh",
@@ -587,7 +656,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [18.068581, 59.329323]
+        "coordinates": [
+          18.068581,
+          59.329323
+        ]
       },
       "properties": {
         "name": "Stockholm",
@@ -627,7 +699,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [28.978359, 41.008238]
+        "coordinates": [
+          28.978359,
+          41.008238
+        ]
       },
       "properties": {
         "name": "Istanbul",
@@ -667,7 +742,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [23.727539, 37.98381]
+        "coordinates": [
+          23.727539,
+          37.98381
+        ]
       },
       "properties": {
         "name": "Athens",
@@ -707,7 +785,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [7.424616, 43.738418]
+        "coordinates": [
+          7.424616,
+          43.738418
+        ]
       },
       "properties": {
         "name": "Monaco",
@@ -747,7 +828,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [8.309307, 47.050168]
+        "coordinates": [
+          8.309307,
+          47.050168
+        ]
       },
       "properties": {
         "name": "Lucerne",
@@ -787,7 +871,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [3.2247, 51.209348]
+        "coordinates": [
+          3.2247,
+          51.209348
+        ]
       },
       "properties": {
         "name": "Bruges",
@@ -827,42 +914,60 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-3.70379, 40.416775]
+        "coordinates": [
+          -3.70379,
+          40.416775
+        ]
       },
       "properties": {
         "name": "Madrid",
         "placeId": "madrid",
         "role": "item",
         "icon": "yellow-circle",
-        "items": ["double-dice", "tripple-dice"]
+        "items": [
+          "double-dice",
+          "tripple-dice"
+        ]
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [6.143158, 46.204391]
+        "coordinates": [
+          6.143158,
+          46.204391
+        ]
       },
       "properties": {
         "name": "Geneva",
         "placeId": "geneva",
         "role": "item",
         "icon": "yellow-circle",
-        "items": ["double-dice", "tripple-dice"]
+        "items": [
+          "double-dice",
+          "tripple-dice"
+        ]
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-2.991573, 53.408371]
+        "coordinates": [
+          -2.991573,
+          53.408371
+        ]
       },
       "properties": {
         "name": "Livepool",
         "placeId": "livepool",
         "role": "item",
         "icon": "yellow-circle",
-        "items": ["double-dice", "tripple-dice"]
+        "items": [
+          "double-dice",
+          "tripple-dice"
+        ]
       }
     }
   ]
