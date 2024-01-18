@@ -30,4 +30,4 @@ export type PlaceId =
   | "bruges"
   | "madrid"
   | "geneva"
-  | "livepool";
+  | "liverpool";

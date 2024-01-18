@@ -1,5 +1,5 @@
 
-  export const PLACE_NAME_DICTIONARY = {
+    export const PLACE_NAME_DICTIONARY = {
   "zaragoza": {
     "en": "Zaragoza"
   },
@@ -93,11 +93,11 @@
   "geneva": {
     "en": "Geneva"
   },
-  "livepool": {
-    "en": "Livepool"
+  "liverpool": {
+    "en": "Liverpool"
   }
 };
-  export const ASSET_NAME_DICTIONARY = {
+    export const ASSET_NAME_DICTIONARY = {
   "amsterdamCanalCruiseCompany": {
     "en": "Canal Cruise Company"
   },
@@ -339,4 +339,4 @@
     "en": "Fries Stand Chain"
   }
 }
-  
+    

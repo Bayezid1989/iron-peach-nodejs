@@ -30,10 +30,13 @@ export const getCoordinates = (placeName: string) => {
     query: placeName,
   };
 
-  axios
+  return axios
     .get("http://api.positionstack.com/v1/forward", { params })
     .then((response) => {
-      console.log(response.data);
+      const point = response?.data?.data?.[0];
+      if (!point) return null;
+      console.log(`${placeName} found`);
+      return { lat: point.latitude as number, lng: point.longitude as number };
     })
     .catch((error) => {
       console.log(error.response.data);

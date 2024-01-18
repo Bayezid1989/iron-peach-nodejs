@@ -4,9 +4,9 @@ import {
   ASSET_PLACES,
   INCOME_EXPENSE_PLACES,
   ITEM_PLACES,
-} from "../constants/placesBase";
+} from "../constants/base/places";
 import { writeStringFile } from "../utils";
-import { ROUTES } from "../constants/routes";
+import { ROUTES } from "../constants/base/routes";
 
 export const generatePlaceFeaturesGeoJson = () => {
   const allPlaces = Object.entries({

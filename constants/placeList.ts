@@ -671,7 +671,7 @@ export const ITEM_PLACES: Record<string, AppPlaceConfig> = {
     role: "item",
     items: ["doubleDice", "trippleDice"],
   },
-  livepool: {
+  liverpool: {
     coordinates: {
       lat: 53.408371,
       lng: -2.991573,

@@ -1,3 +1,16 @@
+import {
+  generateDictionaryAndPlaceList,
+  generatePlaceIdArray,
+} from "./generaters/app";
+import {
+  generatePlaceMergeCypher,
+  generateRouteMergeCypher,
+} from "./generaters/cypher";
+import {
+  generatePlaceFeaturesGeoJson,
+  generateRouteFeaturesGeoJson,
+} from "./generaters/geoJson";
+import { generatePlaceIdEnum } from "./generaters/utility";
 import { driver, readNeo4j } from "./neo4j";
 import { getCoordinates } from "./utils";
 
@@ -9,12 +22,14 @@ import { getCoordinates } from "./utils";
   //   "graph",
   //   graph.map((g) => g.n.properties),
   // );
-
+  // generateCoordinateList();
+  // generatePlaceIdEnum();
   // generatePlaceIdArray();
-  // generateRouteFeaturesGeoJson();
+  generateDictionaryAndPlaceList();
+  generatePlaceMergeCypher();
   // generateRouteMergeCypher();
-  // generatePlaceMergeCypher();
-  // generatePlaceFeaturesGeoJson();
-  // generateDictionaryAndPlaceListForApp();
-  getCoordinates("Paris");
+  generatePlaceFeaturesGeoJson();
+  generateRouteFeaturesGeoJson();
+
+  // const data = await getCoordinates("Liverpool");
 })();

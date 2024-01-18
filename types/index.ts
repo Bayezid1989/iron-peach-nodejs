@@ -1,7 +1,6 @@
 import { PlaceId } from "./placeIdEnum";
 
 export type PlaceRole = "asset" | "income" | "expense" | "item";
-export type PlaceCategory = "city" | "town" | "store"; // Size or category of the place
 export type CashVolume = "low" | "medium" | "high"; // For income and expense places
 
 export type AppPlaceConfig = {
@@ -26,7 +25,6 @@ export type PlaceConfig = {
   name: string;
   coordinates: { lat: number; lng: number };
   role: PlaceRole;
-  category: PlaceCategory;
   assets?: Asset[];
   items?: string[]; // For item places
   cashVolume?: CashVolume;

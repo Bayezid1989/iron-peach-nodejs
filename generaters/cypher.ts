@@ -2,9 +2,9 @@ import {
   ASSET_PLACES,
   INCOME_EXPENSE_PLACES,
   ITEM_PLACES,
-} from "../constants/placesBase";
+} from "../constants/base/places";
 import { writeStringFile } from "../utils";
-import { ROUTES } from "../constants/routes";
+import { ROUTES } from "../constants/base/routes";
 
 export const generatePlaceMergeCypher = () => {
   const allPlaces = Object.entries({
@@ -18,7 +18,7 @@ export const generatePlaceMergeCypher = () => {
   // Use MERGE instead of CREATE to avoid duplicate nodes
   allPlaces.forEach(([placeId, place]) => {
     const placeCypher = `
-        MERGE (p:Place { name: "${place.name}", placeId: "${placeId}", role: "${place.role}", category: "${place.category}" })
+        MERGE (p:Place { name: "${place.name}", placeId: "${placeId}", role: "${place.role}" })
         SET p.coordinates = point({ longitude: ${place.coordinates.lng}, latitude: ${place.coordinates.lat} });
       `;
     cypherString += placeCypher;

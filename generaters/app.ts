@@ -3,7 +3,7 @@ import {
   ASSET_PLACES,
   INCOME_EXPENSE_PLACES,
   ITEM_PLACES,
-} from "../constants/placesBase";
+} from "../constants/base/places";
 import { convertToCamelCase, writeStringFile } from "../utils";
 
 export const generatePlaceIdArray = () => {
@@ -105,5 +105,5 @@ export const generateDictionaryAndPlaceList = () => {
       ...INCOME_EXPENSE_PLACES,
       ...ITEM_PLACES,
     };`;
-  writeStringFile("constants/placeConfigs.ts", placeListString);
+  writeStringFile("constants/placeList.ts", placeListString);
 };

@@ -1,4 +1,4 @@
-import { RouteConfig } from "../types";
+import { RouteConfig } from "../../types";
 
 export const ROUTES: RouteConfig[] = [
   { places: ["madrid", "burgos"], kind: "land" },
