@@ -1,15 +1,14 @@
 import { PlaceId } from "./placeIdEnum";
 
+export type PlaceRole = "asset" | "income" | "expense" | "item";
+export type PlaceCategory = "city" | "town"; // Size or category of the place
+export type CashVolume = "low" | "medium" | "high"; // For income and expense places
+
 export type Asset = {
-  // For property places
   name: string;
   price: number;
   profitRate: number;
 };
-
-export type PlaceRole = "property" | "income" | "expense" | "item";
-export type PlaceCategory = "city" | "town"; // Size or category of the place
-export type CashVolume = "low" | "medium" | "high"; // For income and expense places
 
 export type PlaceConfig = {
   name: string;
@@ -17,6 +16,18 @@ export type PlaceConfig = {
   role: PlaceRole;
   category: PlaceCategory;
   assets?: Asset[];
+  items?: string[]; // For item places
+  cashVolume?: CashVolume;
+};
+
+export type AppPlaceConfig = {
+  coordinates: { lat: number; lng: number };
+  role: PlaceRole;
+  assets?: {
+    id: string;
+    price: number;
+    profitRate: number;
+  }[];
   items?: string[]; // For item places
   cashVolume?: CashVolume;
 };

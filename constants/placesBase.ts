@@ -4,7 +4,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   amsterdam: {
     name: "Amsterdam",
     coordinates: { lat: 52.377956, lng: 4.89707 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Canal Cruise Company", price: 300, profitRate: 0.1 },
@@ -17,7 +17,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   paris: {
     name: "Paris",
     coordinates: { lat: 48.864716, lng: 2.349014 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       {
@@ -34,7 +34,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   rome: {
     name: "Rome",
     coordinates: { lat: 41.902782, lng: 12.496366 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Gelato Stand Chain", price: 200, profitRate: 0.08 },
@@ -47,7 +47,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   berlin: {
     name: "Berlin",
     coordinates: { lat: 52.520008, lng: 13.404954 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Craft Beer Brewery", price: 250, profitRate: 0.1 },
@@ -64,7 +64,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   london: {
     name: "London",
     coordinates: { lat: 51.509865, lng: -0.118092 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       {
@@ -81,7 +81,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   barcelona: {
     name: "Barcelona",
     coordinates: { lat: 41.390205, lng: 2.154007 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Tapas Bar Chain", price: 300, profitRate: 0.12 },
@@ -98,7 +98,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   copenhagen: {
     name: "Copenhagen",
     coordinates: { lat: 55.676098, lng: 12.568337 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Lego Brick Design Studio", price: 400, profitRate: 0.16 },
@@ -116,7 +116,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   lisbon: {
     name: "Lisbon",
     coordinates: { lat: 38.736946, lng: -9.142685 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       {
@@ -133,7 +133,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   dublin: {
     name: "Dublin",
     coordinates: { lat: 53.35014, lng: -6.266155 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Irish Pub Chain", price: 300, profitRate: 0.12 },
@@ -150,7 +150,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   edinburgh: {
     name: "Edinburgh",
     coordinates: { lat: 55.953251, lng: -3.188267 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Whiskey Distillery", price: 500, profitRate: 0.18 },
@@ -163,7 +163,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   stockholm: {
     name: "Stockholm",
     coordinates: { lat: 59.329323, lng: 18.068581 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Furniture Design Studio", price: 400, profitRate: 0.15 },
@@ -176,7 +176,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   istanbul: {
     name: "Istanbul",
     coordinates: { lat: 41.008238, lng: 28.978359 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Turkish Coffee Shop Chain", price: 300, profitRate: 0.12 },
@@ -189,7 +189,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   athens: {
     name: "Athens",
     coordinates: { lat: 37.98381, lng: 23.727539 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Souvlaki Shop", price: 200, profitRate: 0.08 },
@@ -202,7 +202,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   monaco: {
     name: "Monaco",
     coordinates: { lat: 43.738418, lng: 7.424616 },
-    role: "property",
+    role: "asset",
     category: "city",
     assets: [
       { name: "Casino", price: 1000, profitRate: 0.35 },
@@ -215,7 +215,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   lucerne: {
     name: "Lucerne",
     coordinates: { lat: 47.050168, lng: 8.309307 },
-    role: "property",
+    role: "asset",
     category: "town",
     assets: [
       { name: "Chocolate Shop", price: 300, profitRate: 0.12 },
@@ -228,7 +228,7 @@ export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
   bruges: {
     name: "Bruges",
     coordinates: { lat: 51.209348, lng: 3.2247 },
-    role: "property",
+    role: "asset",
     category: "town",
     assets: [
       { name: "Chocolate Shop", price: 300, profitRate: 0.12 },
@@ -340,20 +340,20 @@ export const ITEM_PLACES: { [placeId: string]: PlaceConfig } = {
     coordinates: { lat: 40.416775, lng: -3.70379 },
     role: "item",
     category: "city",
-    items: ["double-dice", "tripple-dice"],
+    items: ["doubleDice", "trippleDice"],
   },
   geneva: {
     name: "Geneva",
     coordinates: { lat: 46.204391, lng: 6.143158 },
     role: "item",
     category: "city",
-    items: ["double-dice", "tripple-dice"],
+    items: ["doubleDice", "trippleDice"],
   },
   livepool: {
     name: "Livepool",
     coordinates: { lat: 53.408371, lng: -2.991573 },
     role: "item",
     category: "city",
-    items: ["double-dice", "tripple-dice"],
+    items: ["doubleDice", "trippleDice"],
   },
 };

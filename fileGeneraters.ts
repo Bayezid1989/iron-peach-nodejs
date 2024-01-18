@@ -1,14 +1,14 @@
-import { PlaceFeature } from "./types";
+import { AppPlaceConfig, PlaceConfig, PlaceFeature } from "./types";
 import { ICON_MAP } from "./constants";
 import {
   PROPERTY_PLACES,
   INCOME_EXPENSE_PLACES,
   ITEM_PLACES,
-} from "./constants/places";
-import { writeStringFile } from "./utils";
+} from "./constants/placesBase";
+import { convertToCamelCase, writeStringFile } from "./utils";
 import { ROUTES } from "./constants/routes";
 
-export const generateEnum = () => {
+export const generatePlaceIdEnum = () => {
   const allPlaceIds = Object.keys({
     ...INCOME_EXPENSE_PLACES,
     ...PROPERTY_PLACES,
@@ -21,6 +21,19 @@ export const generateEnum = () => {
   });
   enumString = enumString.slice(0, -2);
   writeStringFile("types/placeIdEnum.ts", enumString);
+};
+
+export const generatePlaceIdArray = () => {
+  const allPlaceIds = Object.keys({
+    ...INCOME_EXPENSE_PLACES,
+    ...PROPERTY_PLACES,
+    ...ITEM_PLACES,
+  });
+
+  writeStringFile(
+    "constants/placeIdArray.ts",
+    `export const PLACE_IDS: readonly [string, ...string[]] | [string, ...string[]]  = ${JSON.stringify(allPlaceIds, undefined, 2)}`,
+  );
 };
 
 export const generatePlaceFeaturesGeoJson = () => {
@@ -120,4 +133,87 @@ export const generateRouteMergeCypher = () => {
   });
 
   writeStringFile("cypher/mergeRoutes.cypher", cypherString);
+};
+
+export const generateDictionaryAndPlaceListForApp = () => {
+  const allPlaces = {
+    ...INCOME_EXPENSE_PLACES,
+    ...PROPERTY_PLACES,
+    ...ITEM_PLACES,
+  };
+
+  type Dictionary = { [key: string]: { en: string } };
+
+  const newPropertyList: { [placeId: string]: AppPlaceConfig } = {};
+  const newIncomeExpenseList: { [placeId: string]: AppPlaceConfig } = {};
+  const newItemList: { [placeId: string]: AppPlaceConfig } = {};
+  const placeNameDictionary: Dictionary = {};
+  const assetNameDictionary: Dictionary = {};
+
+  const createAssetId = (placeId: string, assetName: string) =>
+    `${placeId}${convertToCamelCase(assetName, false)}`;
+
+  Object.entries(allPlaces).forEach(([placeId, place]) => {
+    placeNameDictionary[placeId] = { en: place.name };
+
+    if (place.assets?.length) {
+      place.assets.forEach((asset) => {
+        const assetId = createAssetId(placeId, asset.name);
+        assetNameDictionary[assetId] = { en: asset.name };
+      });
+    }
+
+    const node = {
+      coordinates: place.coordinates,
+      role: place.role,
+      assets: place.assets?.map((asset) => ({
+        id: createAssetId(placeId, asset.name),
+        price: asset.price,
+        profitRate: asset.profitRate,
+      })),
+      items: place.items,
+      cashVolume: place.cashVolume,
+    };
+
+    switch (place.role) {
+      case "asset":
+        newPropertyList[placeId] = node;
+        break;
+      case "income":
+      case "expense":
+        newIncomeExpenseList[placeId] = node;
+        break;
+      case "item":
+        newItemList[placeId] = node;
+        break;
+    }
+  });
+
+  const dictionaryString = `
+  export const PLACE_NAME_DICTIONARY = ${JSON.stringify(placeNameDictionary, undefined, 2)};
+  export const ASSET_NAME_DICTIONARY = ${JSON.stringify(assetNameDictionary, undefined, 2)}
+  `;
+  writeStringFile("constants/dictionary.ts", dictionaryString);
+
+  const placeListString = `
+  import { AppPlaceConfig } from "../types";
+
+  export const ASSET_PLACES: Record<string, AppPlaceConfig> = ${JSON.stringify(
+    newPropertyList,
+    undefined,
+    2,
+  )};
+  
+  export const INCOME_EXPENSE_PLACES: Record<string, AppPlaceConfig> = ${JSON.stringify(
+    newIncomeExpenseList,
+    undefined,
+    2,
+  )};
+
+  export const ITEM_PLACES: Record<string, AppPlaceConfig> = ${JSON.stringify(
+    newItemList,
+    undefined,
+    2,
+  )};`;
+  writeStringFile("constants/placeConfigs.ts", placeListString);
 };
