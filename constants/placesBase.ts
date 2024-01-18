@@ -1,6 +1,6 @@
 import { PlaceConfig } from "../types";
 
-export const PROPERTY_PLACES: { [placeId: string]: PlaceConfig } = {
+export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
   amsterdam: {
     name: "Amsterdam",
     coordinates: { lat: 52.377956, lng: 4.89707 },

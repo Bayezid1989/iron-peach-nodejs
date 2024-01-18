@@ -1,12 +1,5 @@
-import {
-  generateDictionaryAndPlaceListForApp,
-  generatePlaceFeaturesGeoJson,
-  generatePlaceIdArray,
-  generatePlaceMergeCypher,
-  generateRouteFeaturesGeoJson,
-  generateRouteMergeCypher,
-} from "./fileGeneraters";
 import { driver, readNeo4j } from "./neo4j";
+import { getCoordinates } from "./utils";
 
 (async () => {
   // const serverInfo = await driver.getServerInfo();
@@ -22,5 +15,6 @@ import { driver, readNeo4j } from "./neo4j";
   // generateRouteMergeCypher();
   // generatePlaceMergeCypher();
   // generatePlaceFeaturesGeoJson();
-  generateDictionaryAndPlaceListForApp();
+  // generateDictionaryAndPlaceListForApp();
+  getCoordinates("Paris");
 })();

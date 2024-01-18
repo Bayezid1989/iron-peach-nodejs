@@ -680,3 +680,9 @@ export const ITEM_PLACES: Record<string, AppPlaceConfig> = {
     items: ["doubleDice", "trippleDice"],
   },
 };
+
+export const ALL_PLACES = {
+  ...ASSET_PLACES,
+  ...INCOME_EXPENSE_PLACES,
+  ...ITEM_PLACES,
+};
