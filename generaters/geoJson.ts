@@ -1,4 +1,4 @@
-import { PlaceFeature } from "../types";
+import { PlaceFeature, RouteFeature } from "../types";
 import { ICON_MAP } from "../constants";
 import {
   ASSET_PLACES,
@@ -24,11 +24,7 @@ export const generatePlaceFeaturesGeoJson = () => {
     properties: {
       name: place.name,
       placeId: placeId,
-      role: place.role,
       icon: ICON_MAP[place.role],
-      assets: place.assets,
-      items: place.items,
-      cashVolume: place.cashVolume,
     },
   }));
   const geoJson = {
@@ -45,7 +41,7 @@ export const generateRouteFeaturesGeoJson = () => {
     ...ASSET_PLACES,
     ...ITEM_PLACES,
   };
-  const features = ROUTES.map((route) => {
+  const features: RouteFeature[] = ROUTES.map((route) => {
     const from = allPlaceList[route.places[0]];
     const to = allPlaceList[route.places[1]];
 

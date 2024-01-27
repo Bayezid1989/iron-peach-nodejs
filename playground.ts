@@ -25,11 +25,11 @@ import { getCoordinates } from "./utils";
   // generateCoordinateList();
   // generatePlaceIdEnum();
   // generatePlaceIdArray();
-  generateDictionaryAndPlaceList();
-  generatePlaceMergeCypher();
+  // generateDictionaryAndPlaceList();
+  // generatePlaceMergeCypher();
   // generateRouteMergeCypher();
   generatePlaceFeaturesGeoJson();
-  generateRouteFeaturesGeoJson();
+  // generateRouteFeaturesGeoJson();
 
   // const data = await getCoordinates("Liverpool");
 })();

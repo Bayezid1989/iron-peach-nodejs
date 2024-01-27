@@ -1,4 +1,4 @@
-import { PlaceConfig } from "../types";
+import { PlaceConfig } from "../../types";
 
 export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
   amsterdam: {
@@ -17,7 +17,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Paris",
     coordinates: { lat: 48.864716, lng: 2.349014 },
     role: "asset",
-
     assets: [
       {
         name: "Eiffel Tower Viewing Platform Concessions",
@@ -34,7 +33,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Rome",
     coordinates: { lat: 41.902782, lng: 12.496366 },
     role: "asset",
-
     assets: [
       { name: "Gelato Stand Chain", price: 200, profitRate: 0.08 },
       { name: "Colosseum Souvenir Shop", price: 450, profitRate: 0.18 },
@@ -47,7 +45,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Berlin",
     coordinates: { lat: 52.520008, lng: 13.404954 },
     role: "asset",
-
     assets: [
       { name: "Craft Beer Brewery", price: 250, profitRate: 0.1 },
       { name: "Tech Startup Incubator", price: 400, profitRate: 0.15 },
@@ -64,7 +61,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "London",
     coordinates: { lat: 51.509865, lng: -0.118092 },
     role: "asset",
-
     assets: [
       {
         name: "Double Decker Bus Advertising Contract",
@@ -81,7 +77,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Barcelona",
     coordinates: { lat: 41.390205, lng: 2.154007 },
     role: "asset",
-
     assets: [
       { name: "Tapas Bar Chain", price: 300, profitRate: 0.12 },
       { name: "Soccer Club Merchandise Stand", price: 600, profitRate: 0.22 },
@@ -98,7 +93,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Copenhagen",
     coordinates: { lat: 55.676098, lng: 12.568337 },
     role: "asset",
-
     assets: [
       { name: "Lego Brick Design Studio", price: 400, profitRate: 0.16 },
       {
@@ -116,7 +110,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Lisbon",
     coordinates: { lat: 38.736946, lng: -9.142685 },
     role: "asset",
-
     assets: [
       {
         name: "Tramcar Network Advertising Rights",
@@ -133,7 +126,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Dublin",
     coordinates: { lat: 53.35014, lng: -6.266155 },
     role: "asset",
-
     assets: [
       { name: "Irish Pub Chain", price: 300, profitRate: 0.12 },
       { name: "Whiskey Distillery", price: 500, profitRate: 0.18 },
@@ -150,7 +142,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Edinburgh",
     coordinates: { lat: 55.953251, lng: -3.188267 },
     role: "asset",
-
     assets: [
       { name: "Whiskey Distillery", price: 500, profitRate: 0.18 },
       { name: "Scottish Wool Products Workshop", price: 600, profitRate: 0.22 },
@@ -163,7 +154,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Stockholm",
     coordinates: { lat: 59.329323, lng: 18.068581 },
     role: "asset",
-
     assets: [
       { name: "Furniture Design Studio", price: 400, profitRate: 0.15 },
       { name: "Nobel Prize Museum Gift Shop", price: 300, profitRate: 0.12 },
@@ -176,7 +166,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Istanbul",
     coordinates: { lat: 41.008238, lng: 28.978359 },
     role: "asset",
-    category: "city",
     assets: [
       { name: "Turkish Coffee Shop Chain", price: 300, profitRate: 0.12 },
       { name: "Baklava Bakery Chain", price: 400, profitRate: 0.15 },
@@ -189,7 +178,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Athens",
     coordinates: { lat: 37.98381, lng: 23.727539 },
     role: "asset",
-
     assets: [
       { name: "Souvlaki Shop", price: 200, profitRate: 0.08 },
       { name: "Olive Oil Factory", price: 300, profitRate: 0.12 },
@@ -202,7 +190,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Monaco",
     coordinates: { lat: 43.738418, lng: 7.424616 },
     role: "asset",
-
     assets: [
       { name: "Casino", price: 1000, profitRate: 0.35 },
       { name: "Yacht Rental Company", price: 800, profitRate: 0.3 },
@@ -215,7 +202,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Lucerne",
     coordinates: { lat: 47.050168, lng: 8.309307 },
     role: "asset",
-
     assets: [
       { name: "Chocolate Shop", price: 300, profitRate: 0.12 },
       { name: "Swiss Watch Workshop", price: 400, profitRate: 0.15 },
@@ -228,7 +214,6 @@ export const ASSET_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Bruges",
     coordinates: { lat: 51.209348, lng: 3.2247 },
     role: "asset",
-
     assets: [
       { name: "Chocolate Shop", price: 300, profitRate: 0.12 },
       { name: "Beer Brewery", price: 400, profitRate: 0.15 },
@@ -244,70 +229,60 @@ export const INCOME_EXPENSE_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Zaragoza",
     coordinates: { lat: 41.648823, lng: -0.889085 },
     role: "income",
-
     cashVolume: "low",
   },
   montpellier: {
     name: "Montpellier",
     coordinates: { lat: 43.610769, lng: 3.876716 },
     role: "income",
-
     cashVolume: "low",
   },
   burgos: {
     name: "Burgos",
     coordinates: { lat: 42.343479, lng: -3.696906 },
     role: "income",
-
     cashVolume: "low",
   },
   toulouse: {
     name: "Toulouse",
     coordinates: { lat: 43.604652, lng: 1.444209 },
     role: "income",
-
     cashVolume: "low",
   },
   sanSebastian: {
     name: "San Sebastian",
     coordinates: { lat: 43.318334, lng: -1.981231 },
     role: "expense",
-
     cashVolume: "medium",
   },
   pau: {
     name: "Pau",
     coordinates: { lat: 43.296482, lng: -0.370089 },
     role: "income",
-
     cashVolume: "low",
   },
   bordeaux: {
     name: "Bordeaux",
     coordinates: { lat: 44.837789, lng: -0.57918 },
     role: "expense",
-
     cashVolume: "medium",
   },
   nantes: {
     name: "Nantes",
     coordinates: { lat: 47.218371, lng: -1.553621 },
     role: "income",
-
     cashVolume: "medium",
   },
   lyon: {
     name: "Lyon",
     coordinates: { lat: 45.764043, lng: 4.835659 },
     role: "expense",
-
     cashVolume: "medium",
   },
   porto: {
     name: "Porto",
     coordinates: { lat: 41.157944, lng: -8.629105 },
     role: "income",
-
     cashVolume: "low",
   },
   sevilla: {
@@ -321,14 +296,12 @@ export const INCOME_EXPENSE_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Gibraltar",
     coordinates: { lat: 36.140751, lng: -5.353585 },
     role: "income",
-
     cashVolume: "low",
   },
   granada: {
     name: "Granada",
     coordinates: { lat: 37.177336, lng: -3.598557 },
     role: "expense",
-
     cashVolume: "medium",
   },
 };
@@ -338,14 +311,12 @@ export const ITEM_PLACES: { [placeId: string]: PlaceConfig } = {
     name: "Madrid",
     coordinates: { lat: 40.416775, lng: -3.70379 },
     role: "item",
-
     items: ["doubleDice", "trippleDice"],
   },
   geneva: {
     name: "Geneva",
     coordinates: { lat: 46.204391, lng: 6.143158 },
     role: "item",
-
     items: ["doubleDice", "trippleDice"],
   },
   liverpool: {

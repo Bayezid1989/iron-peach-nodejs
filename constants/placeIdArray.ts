@@ -1,4 +1,4 @@
-export const PLACE_IDS: readonly [string, ...string[]] | [string, ...string[]]  = [
+export const PLACE_IDS = [
   "zaragoza",
   "montpellier",
   "burgos",
@@ -30,5 +30,5 @@ export const PLACE_IDS: readonly [string, ...string[]] | [string, ...string[]]  
   "bruges",
   "madrid",
   "geneva",
-  "liverpool"
-]
+  "liverpool",
+] as const;

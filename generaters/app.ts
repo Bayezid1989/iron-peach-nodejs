@@ -15,7 +15,7 @@ export const generatePlaceIdArray = () => {
 
   writeStringFile(
     "constants/placeIdArray.ts",
-    `export const PLACE_IDS: readonly [string, ...string[]] | [string, ...string[]]  = ${JSON.stringify(allPlaceIds, undefined, 2)}`,
+    `export const PLACE_IDS = ${JSON.stringify(allPlaceIds, undefined, 2)} as const`,
   );
 };
 
@@ -47,28 +47,33 @@ export const generateDictionaryAndPlaceList = () => {
       });
     }
 
-    const node = {
-      coordinates: place.coordinates,
-      role: place.role,
-      assets: place.assets?.map((asset) => ({
-        id: createAssetId(placeId, asset.name),
-        price: asset.price,
-        profitRate: asset.profitRate,
-      })),
-      items: place.items,
-      cashVolume: place.cashVolume,
-    };
-
     switch (place.role) {
       case "asset":
-        newAssetList[placeId] = node;
+        newAssetList[placeId] = {
+          coordinates: place.coordinates,
+          role: place.role,
+          assets:
+            place.assets?.map((asset) => ({
+              id: createAssetId(placeId, asset.name),
+              price: asset.price,
+              profitRate: asset.profitRate,
+            })) || [],
+        };
         break;
       case "income":
       case "expense":
-        newIncomeExpenseList[placeId] = node;
+        newIncomeExpenseList[placeId] = {
+          coordinates: place.coordinates,
+          role: place.role,
+          cashVolume: place.cashVolume || "medium",
+        };
         break;
       case "item":
-        newItemList[placeId] = node;
+        newItemList[placeId] = {
+          coordinates: place.coordinates,
+          role: place.role,
+          items: place.items || [],
+        };
         break;
     }
   });

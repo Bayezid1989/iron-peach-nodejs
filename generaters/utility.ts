@@ -3,7 +3,7 @@ import {
   INCOME_EXPENSE_PLACES,
   ITEM_PLACES,
 } from "../constants/base/places";
-import { getCoordinates, writeStringFile } from "../utils";
+import { writeStringFile } from "../utils";
 
 export const generatePlaceIdEnum = () => {
   const allPlaceIds = Object.keys({
